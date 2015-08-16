@@ -22,3 +22,6 @@ simple code that takes a user's input, then builds a hash from that input. Each 
 - plain 1
 - Spain 1
 </addr>
+
+#mega_greeter
+ the MegaGreeter  ruby class can  either greet the world, one person, or a whole list of people?

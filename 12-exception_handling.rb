@@ -1,11 +1,11 @@
 # The basic structure of exceptions looks like this
 
-# begin
-#   # perform some dangerous operation
-# rescue
-#   # do this if operation fails
-#   # for example, log the error
-# end
+                # begin
+                #   # perform some dangerous operation
+                # rescue
+                #   # do this if operation fails
+                #   # for example, log the error
+                # end
 
 names = ['bob', 'joe', 'steve', nil, 'frank']
 
@@ -26,7 +26,7 @@ zero = 0
 puts "Before each call"
 zero.each { |element| puts element } rescue puts "Can't do that!"
 puts "After each call"
-# This code prints the following output:(cant call .each method on an int)
+# This code prints the following output:(can't call .each method on an int)
 #
 # Before each call
 # Can't do that!
@@ -44,6 +44,6 @@ end
 puts divide(16, 4)
 puts divide(4, 0)
 puts divide(14, 7)
-# Here we are rescuing the ZeroDivisionError and saving it into a variable e. 
+# Here we are rescuing the ZeroDivisionError and saving it into a variable e.
 # We then have access to the message method that the ZeroDivisionError object has
 # available

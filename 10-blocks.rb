@@ -3,6 +3,7 @@
 
 #the &(ampersand) in the method definition tells us that the argument is a block
 #The block must always be the last parameter in the method definition.
+#The ampersand allows a block to be passed as a parameter
 def take_block(&block)
   block.call
 end

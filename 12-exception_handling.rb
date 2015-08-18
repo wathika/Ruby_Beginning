@@ -26,8 +26,24 @@ zero = 0
 puts "Before each call"
 zero.each { |element| puts element } rescue puts "Can't do that!"
 puts "After each call"
-# This code prints the following output:(cant call .each on an int)
+# This code prints the following output:(cant call .each method on an int)
 #
 # Before each call
 # Can't do that!
 # After each call
+
+#we can also rescue pre-existing errors(errors before they happen)
+def divide(number, divisor)
+  begin
+    answer = number / divisor
+  rescue ZeroDivisionError => e
+    puts e.message
+  end
+end
+
+puts divide(16, 4)
+puts divide(4, 0)
+puts divide(14, 7)
+# Here we are rescuing the ZeroDivisionError and saving it into a variable e. 
+# We then have access to the message method that the ZeroDivisionError object has
+# available

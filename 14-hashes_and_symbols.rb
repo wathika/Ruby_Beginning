@@ -10,3 +10,5 @@ end
 
 #if you dont want to settle for nil./
 no_nil_hash = Hash.new(""default val)
+
+my_first_symbol = :viscount        #creating a symbol

@@ -14,7 +14,12 @@ nums = [1,2,3,4,5,6,7,8,9,10]
   #simply returns a sorted array while leaving the original array alone.
   #The second method, .sort!, modifies the actual array.
 def alphabetize(arr, rev=false)
+  if rev == false
+    arr.reverse!   #this method doesn't default to alphabetizing an array when
+                  #it doesn't receive a second parameter.
+  else
     arr.sort!
+  end
 end
 
 numbers = [1,2,3,4,5,6]

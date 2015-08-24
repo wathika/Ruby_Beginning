@@ -26,3 +26,28 @@ proc = Proc.new do |number|
 end
 
 take_proc(proc)
+
+
+#blocks can't be saved to variables and don't have all the powers and abilities
+#of a real object. For that, we'll need... procs!
+#You can think of a proc as a "saved" block
+
+
+cube = Proc.new { |x| x ** 3 }   #creating a proc called cube
+
+[1, 2, 3].collect!(&cube)    #we can then pass the proc to a method
+# ==> [1, 8, 27]
+[4, 5, 6].map!(&cube)       #The & is used to convert the cube proc into a block
+# ==> [64, 125, 216]        #(since .collect! and .map! normally take a block).
+
+#Unlike blocks, we can call procs directly by using Ruby's .call method.
+test = Proc.new { # does something }
+test.call
+# does that something!
+hi = Proc.new { puts "Hello!"}
+hi.call
+
+ #you can also convert symbols to procs
+ strings = ["1", "2", "3"]
+ nums = strings.map(&:to_i)
+ # ==> [1, 2, 3]

@@ -27,3 +27,8 @@ end
 # take_block method and using it in our block.call.
 # You can see the amount of flexibity and the myriad of possibilities that come
 # into play when using blocks.
+5.times do
+  puts "Printed 5 times."
+end
+
+#collect them all 

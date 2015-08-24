@@ -20,7 +20,11 @@ def yield_name(name)
   puts "Block complete! Back in the method."
 end
 
-yield_name("Eric") { |n| puts "My name is #{n}." }
+yield_name("Eric") { |n| puts "My name is #{n}." }  # call it with a block that
 
 # Now call the method with your name!
-yield_name("viscount") { |x| puts "name's #{x}"} 
+yield_name("viscount") { |x| puts "name's #{x}"}    # call it with a block that
+
+#blocks can't be saved to variables and don't have all the powers and abilities
+#of a real object. For that, we'll need... procs!
+#You can think of a proc as a "saved" block:  ...check procs.rb

@@ -31,4 +31,9 @@ end
   puts "Printed 5 times."
 end
 
-#collect them all 
+#collect them all
+fibs = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+doubled_fibs = fibs.collect do |x|
+    x*2
+end
